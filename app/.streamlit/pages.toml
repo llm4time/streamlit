@@ -1,0 +1,29 @@
+[[pages]]
+path = "pages/upload.py"
+name = "Upload"
+icon = "📤"
+url_path = "upload"
+
+[[pages]]
+path = "pages/statistics.py"
+name = "Statistics"
+icon = "🎯"
+url_path = "statistics"
+
+[[pages]]
+path = "pages/settings.py"
+name = "Settings"
+icon = "⚙️"
+url_path = "settings"
+
+[[pages]]
+path = "pages/forecast.py"
+name = "Forecast"
+icon = "📊"
+url_path = "forecast"
+
+[[pages]]
+path = "pages/history.py"
+name = "History"
+icon = "📁"
+url_path = "history"
