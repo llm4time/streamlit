@@ -10,7 +10,7 @@ class LocalStorage:
   def _load(self, key: str) -> List[Dict[str, Any]]:
     data = self._storage.getItem(key)
     data = data if isinstance(data, list) else []
-    time.sleep(0.3)
+    time.sleep(1)
     return data
 
   def _next_id(self, records: List[Dict[str, Any]]) -> int:
@@ -22,21 +22,20 @@ class LocalStorage:
     value_with_id = {"id": next_id, **value}
     records.append(value_with_id)
     self._storage.setItem(key, records)
-    time.sleep(0.3)
+    time.sleep(1)
 
   def get_item(self, key: str) -> Any:
-    data = self._storage.getItem(key)
-    time.sleep(0.3)
+    data = self._load(key)
     return data
 
   def update_items(self, key: str, records: List[Dict[str, Any]]) -> None:
     self._storage.setItem(key, records)
-    time.sleep(0.3)
+    time.sleep(1)
 
   def remove_item(self, key: str) -> None:
     self._storage.eraseItem(key)
-    time.sleep(0.3)
+    time.sleep(1)
 
   def clear(self) -> None:
     self._storage.deleteAll()
-    time.sleep(0.3)
+    time.sleep(1)
